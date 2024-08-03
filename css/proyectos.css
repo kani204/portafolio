@@ -1,0 +1,157 @@
+*{
+    font-family: "Nunito", sans-serif;;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #f3f4f6; 
+}
+
+/*barra de desplazamiento*/
+body::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #4a82fa;        
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #1e40af;    
+    border-radius: 20px;       
+    border: 3px solid #4a82fa;  
+  }
+
+/*Inicio Header*/
+
+.encabezado {
+    background-color: #1e40af;
+    color: white;
+    padding-top: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.subtitulo {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #3b61dd;
+}
+
+.enlace-nav {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.enlace-nav:hover {
+    background-color: #4a82fa;
+}
+
+/*Fin Header*/
+
+/* Estilos generales */
+body {
+    margin: 0;
+    background-color: #ebf8ff;
+    color: #1a202c;
+}
+
+.contenedor {
+    padding: 1rem;
+    min-height: 100vh;
+    background-color: #ebf8ff;
+}
+
+
+.envoltura-contenido {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.seccion {
+    margin-bottom: 2rem;
+}
+
+.titulo-seccion {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+
+
+.cuadricula-proyectos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .cuadricula-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cuadricula-proyectos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.tarjeta-proyecto {
+    background-color: #bee3f8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.tarjeta-proyecto:hover{
+    background-color: #a0d7f7;
+}
+
+
+.imagen-proyecto {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+.integrantes{
+    font-size: 13px;
+}
+
+.nombre-proyecto {
+    color: #2a4365;
+    font-weight: bold;
+}
+
+

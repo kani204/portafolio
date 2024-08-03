@@ -1,0 +1,173 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #f3f4f6; 
+}
+
+/*Inicio Header*/
+
+.encabezado {
+    font-family: "Nunito", sans-serif;
+    background-color: #1e40af;
+    color: white;
+    padding-top: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.subtitulo {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #3b61dd;
+}
+
+.enlace-nav {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.enlace-nav:hover {
+    background-color: #4a82fa;
+}
+
+/*Fin Header*/
+
+section{
+    margin-top: 25px;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-habilidades {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    font-family: "Nunito", sans-serif;
+    max-height: 100vh; 
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.habilidad {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 25px;
+}
+
+.nombre-habilidad {
+    text-align: left;
+    color: #000;
+}
+
+.barra-habilidad {
+    background-color: #4a82fa;
+    height: 2rem;
+    position: relative;
+}
+
+.nivel-habilidad {
+    background-color: #3b61dd;
+    height: 100%;
+    position: absolute;
+    animation: llenarHabilidad 1s ease forwards; 
+}
+
+@keyframes llenarHabilidad {
+    from {
+        width: 0%; 
+    }
+    to {
+        width: var(--porcentaje); 
+    }
+}
+
+.porcentaje-habilidad {
+    text-align: right;
+    color: #000;
+}
+
+/* Media Queries */
+
+/* Pantallas medianas (entre 768px y 1200px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .contenedor-habilidades {
+        width: 80%;
+    }
+    .habilidad {
+        font-size: 20px;
+    }
+    .barra-habilidad {
+        height: 1.5rem;
+    }
+}
+
+/* Pantallas pequeñas (entre 480px y 768px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .contenedor-habilidades {
+        width: 90%;
+    }
+    .habilidad {
+        font-size: 18px;
+    }
+    .barra-habilidad {
+        height: 1.25rem;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .enlace-nav {
+        padding: 5px 10px;
+    }
+}
+
+/* Celulares (menos de 480px) */
+@media (max-width: 479px) {
+    .contenedor-habilidades {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .habilidad {
+        font-size: 16px;
+    }
+    .barra-habilidad {
+        height: 1rem;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .enlace-nav {
+        padding: 5px 10px;
+    }
+    .titulo {
+        font-size: 24px;
+    }
+    .subtitulo {
+        font-size: 18px;
+    }
+}
